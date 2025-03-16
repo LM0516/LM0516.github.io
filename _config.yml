@@ -3,6 +3,7 @@ safe: true
 source: templates
 incremental: false
 highlighter: rouge
+remote_theme: pages-themes/minimal@v0.2.0
 gist:
   noscript: false
 kramdown:
