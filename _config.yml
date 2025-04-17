@@ -1,6 +1,6 @@
 title: My Project Site
 description: A GitHub Pages site using Jekyll
-# theme: minima
+theme: minima
 
 #####################################
 # --- Footer social media links --- #
