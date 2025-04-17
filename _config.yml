@@ -1,8 +1,7 @@
 title: My Project Site
 description: A GitHub Pages site using Jekyll
 url: "https://lm05165.github.io"
-remote_theme: mmistakes/minimal-mistakes
-plugins:
-  - jekyll-remote-theme
-  - jekyll-paginate
-  - jekyll-seo-tag
+theme: minima
+# remote_theme: mmistakes/minimal-mistakes
+# plugins:
+#   - jekyll-remote-theme
