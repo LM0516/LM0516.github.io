@@ -49,6 +49,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Add other links as needed
             }
             
+            // Gestione dinamica dei link nell'header
+            const homeLinks = document.querySelectorAll('#home-link');
+            homeLinks.forEach(link => {
+                link.href = isInSubfolder ? '../index.html' : 'index.html';
+            });
+            const aboutLink = document.getElementById('about-link');
+            if (aboutLink) aboutLink.href = isInSubfolder ? 'about.html' : 'pages/about.html';
+            const projectLink = document.getElementById('project-link');
+            if (projectLink) projectLink.href = isInSubfolder ? 'projects.html' : 'pages/projects.html';
+            const uni = document.getElementById('uni-link');
+            if (uni) uni.href = isInSubfolder ? 'uni-notes.html' : 'pages/uni-notes.html';
+
             // Set active nav item after header is loaded
             setActiveNavItem();
         })
