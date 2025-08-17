@@ -1,112 +1,176 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YourName - Personal Website</title>
-    <meta name="description" content="Personal website of YourName - Developer, Designer, Creator">
-    
-    <!-- Favicon (replace with your own) -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
-    <!-- Google Fonts - Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!-- Header placeholder -->
-    <div id="header-placeholder"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Personal Website</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #121212;
+                color: #e0e0e0;
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            header,
+            section,
+            footer {
+                max-width: 800px;
+                padding: 2rem;
+                opacity: 0;
+                transform: translateY(40px);
+                transition: all 1s ease;
+            }
+            header.show,
+            section.show,
+            footer.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            a {
+                color: #80cbc4;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+            a:hover {
+                text-decoration: underline;
+                color: #a7ffeb;
+            }
+            h1,
+            h2,
+            h3 {
+                margin-bottom: 1rem;
+            }
+            .divider {
+                border-top: 1px solid #333;
+                margin: 2rem 0;
+                width: 80%;
+                opacity: 0;
+                transform: scaleX(0.8);
+                transition: all 1s ease;
+            }
+            .divider.show {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            pre,
+            code {
+                background: #1e1e1e;
+                padding: 0.5rem;
+                border-radius: 5px;
+                display: block;
+                text-align: left;
+                overflow-x: auto;
+            }
+            ul {
+                list-style-position: inside;
+                padding-left: 0;
+            }
+            li {
+                margin: 0.5rem 0;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 0.8s ease;
+            }
+            li.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Lorenzo Minuz</h1>
+            <p>Physics student | Tech Enthusiast | Lifelong Learner</p>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#notes">Notes</a>
+                <!-- <a href="#cv">CV</a> -->
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
 
-    <!-- Main content section -->
-    <main>
-        <div class="container">
-            <section class="text-center">
-                <h1>Hello, I'm Lorenzo!</h1>
-                <p class="mb-4">Student</p>
-                <p class="mb-4">
-                    Welcome to my personal website.
-                </p>
-                <a href="pages/about.html" class="btn btn-primary">More About Me</a>
-            </section>
-            
-            <section>
-                <h2>What I Do</h2>
-                <div class="row">
-                    <div class="col">
-                        <div class="card">
-                            <h3>Physics student</h3>
-                            <p>
-                                Building responsive, user-friendly websites and web applications
-                                using modern technologies and frameworks.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <h3>Swimming instructor</h3>
-                            <p>
-                                Creating intuitive, aesthetically pleasing user interfaces
-                                with a focus on user experience and accessibility.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- <div class="col">
-                        <div class="card">
-                            <h3>Open Source</h3>
-                            <p>
-                                Contributing to and maintaining open source projects
-                                to give back to the developer community.
-                            </p>
-                        </div>
-                    </div> -->
-                </div>
-            </section>
-            
-            <section>
-                <h2>Featured Projects</h2>
-                <div class="row">
-                    <div class="col">
-                        <div class="card">
-                            <h3>Project Name</h3>
-                            <p>
-                                A brief description of what this project does and 
-                                the technologies used to build it.
-                            </p>
-                            <a href="#" class="btn">View Project</a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <h3>Another Project</h3>
-                            <p>
-                                A brief description of what this project does and 
-                                the technologies used to build it.
-                            </p>
-                            <a href="#" class="btn">View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- <section class="text-center">
-                <h2>Get In Touch</h2>
-                <p class="mb-4">
-                    Interested in working together or have a question?
-                    Feel free to reach out to me.
-                </p>
-                <a href="mailto:your.email@example.com" class="btn btn-primary">Contact Me</a>
-            </section> -->
-        </div>
-    </main>
+        <div class="divider"></div>
 
-    <!-- Footer placeholder -->
-    <div id="footer-placeholder"></div>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Lorenzo Minuz, a passionate physics student with a
+                love for minimal design, efficient code, and sharing knowledge.
+                This is my personal space on the web.
+            </p>
+        </section>
 
-    <!-- Include scripts -->
-    <script src="js/include.js"></script>
-</body>
+        <div class="divider"></div>
+
+        <section id="notes">
+            <h2>University Notes</h2>
+            <p>Here are some notes I made during my studies:</p>
+            <ul>
+                <li>
+                    <a href="pdf/Appunti_Chimica.pdf">Chimica</a>
+                </li>
+                <li>
+                    <a href="pdf/Appunti_Fisica_tecnica.pdf">Fisica Tecnica</a>
+                </li>
+                <li>
+                    <a href="pdf/Appunti_Meccanica_dei_fluidi.pdf"
+                        >Meccanica dei Fluidi</a
+                    >
+                </li>
+                <li>
+                    <a href="pdf/Appunti_Principi_di_sistemi_elettrici.pdf"
+                        >Principi di Sistemi Elettrici</a
+                    >
+                </li>
+            </ul>
+        </section>
+
+        <!-- <div class="divider"></div> -->
+        <!---->
+        <!-- <section id="cv"> -->
+        <!--     <h2>Curriculum Vitae</h2> -->
+        <!--     <p>You can view or download my CV <a href="#">here</a>.</p> -->
+        <!-- </section> -->
+
+        <div class="divider"></div>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Get in touch via:</p>
+            <p>
+                <a href="https://github.com/LM0516">GitHub</a>
+            </p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Lorenzo Minuz</p>
+        </footer>
+
+        <script>
+            // Intersection Observer for scroll animations
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("show");
+                        }
+                    });
+                },
+                { threshold: 0.1 },
+            );
+
+            document
+                .querySelectorAll("header, section, footer, .divider, li")
+                .forEach((el) => observer.observe(el));
+        </script>
+    </body>
 </html>
+
