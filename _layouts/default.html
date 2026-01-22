@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description"
+    content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% feed_meta %}
+  {% seo %}
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="site-branding">
+          <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+          <p class="tagline">{{ site.description }}</p>
+        </div>
+        <nav>
+          <a href="{{ '/' | relative_url }}" {% if page.url=='/' %}class="active" {% endif %}>Home</a>
+          <a href="{{ '/notes' | relative_url }}" {% if page.url=='/notes/' or page.url=='/notes.html' %}class="active"
+            {% endif %}>Notes</a>
+          <a href="{{ '/posts' | relative_url }}" {% if page.url=='/posts/' or page.url=='/posts.html' %}class="active"
+            {% endif %}>Posts</a>
+          <a href="{{ '/about' | relative_url }}" {% if page.url=='/about/' or page.url=='/about.html' %}class="active"
+            {% endif %}>About</a>
+          <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>
+        <a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a>
+      </div>
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

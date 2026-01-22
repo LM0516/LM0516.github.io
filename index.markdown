@@ -1,18 +1,41 @@
 ---
-layout: home
-title: My Personal Website
+layout: default
+title: Home
 ---
 
-# About Me
+## Welcome
 
-Hello! I'm Lorenzo Minuz, a passionate physics student with a love for minimal design, efficient code, and sharing knowledge. This is my personal space on the web.
+Hello! I'm **Lorenzo Minuz**, a passionate physics student with a love for minimal design, efficient code, and sharing knowledge. This is my personal space on the web.
 
-# University Notes
+Check out my [university notes](/notes/) from my studies, browse through my [blog posts](/posts/), or learn more [about me](/about/).
 
-Here are some notes I made during my studies:
+---
 
-*   [Chimica](pdf/Appunti_Chimica.pdf)
-*   [Fisica Tecnica](pdf/Appunti_Fisica_tecnica.pdf)
-*   [Meccanica dei Fluidi](pdf/Appunti_Meccanica_dei_fluidi.pdf)
-*   [Principi di Sistemi Elettrici](pdf/Appunti_Principi_di_sistemi_elettrici.pdf)
-*   [Fisica dei Plasmi](pdf/Appunti_Fisica_dei_Plasmi.pdf)
+## Latest Posts
+
+{% if site.posts.size > 0 %}
+<ul class="post-list">
+  {% for post in site.posts limit:3 %}
+  <li class="post-item">
+    <h3 class="post-title">
+      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </h3>
+    <div class="post-meta">
+      <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+    </div>
+    {% if post.excerpt %}
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+{% if site.posts.size > 3 %}
+[View all posts →](/posts/)
+{% endif %}
+
+{% else %}
+<div class="card">
+  <p>No posts yet. Check back soon!</p>
+</div>
+{% endif %}

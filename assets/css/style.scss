@@ -1,0 +1,643 @@
+---
+---
+// Google Fonts import
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+// Premium dark theme colors
+$bg-primary: #0a0a0f;
+$bg-secondary: #12121a;
+$bg-card: rgba(255, 255, 255, 0.03);
+$bg-card-hover: rgba(255, 255, 255, 0.06);
+$text-primary: #f5f5f7;
+$text-secondary: #a1a1a6;
+$text-muted: #6e6e73;
+$border-color: rgba(255, 255, 255, 0.1);
+$accent-primary: #6366f1;
+$accent-secondary: #8b5cf6;
+$accent-gradient: linear-gradient(135deg, $accent-primary 0%, $accent-secondary 100%);
+$link-color: #818cf8;
+$link-hover: #a5b4fc;
+
+// Glassmorphism
+$glass-bg: rgba(255, 255, 255, 0.05);
+$glass-border: rgba(255, 255, 255, 0.1);
+$glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-primary;
+  color: $text-primary;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  min-height: 100vh;
+
+  // Subtle background pattern
+  background-image:
+    radial-gradient(ellipse at top, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: $text-primary;
+  border: none;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  background: $accent-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: 1.75rem;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: $accent-gradient;
+    border-radius: 2px;
+  }
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  color: $text-secondary;
+  margin-bottom: 1rem;
+}
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+// Code
+code {
+  background-color: rgba(99, 102, 241, 0.15);
+  color: $link-color;
+  padding: 0.2em 0.5em;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: $bg-secondary;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+
+  code {
+    background-color: transparent;
+    padding: 0;
+    color: $text-primary;
+  }
+}
+
+// Container
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+// Header
+header {
+  background: $glass-bg;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid $glass-border;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-branding {
+    h1 {
+      font-size: 1.5rem;
+      margin: 0;
+
+      a {
+        background: $accent-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 700;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .tagline {
+      font-size: 0.85rem;
+      color: $text-muted;
+      margin: 0;
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 0.5rem;
+
+    a {
+      color: $text-secondary;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: $text-primary;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      &.active {
+        color: $accent-primary;
+        background: rgba(99, 102, 241, 0.1);
+      }
+    }
+  }
+}
+
+// Main content
+main {
+  padding: 3rem 0;
+  min-height: calc(100vh - 200px);
+}
+
+// Cards
+.card {
+  background: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $bg-card-hover;
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+    box-shadow: $glass-shadow;
+  }
+}
+
+// Post list
+.post-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-item {
+  background: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $bg-card-hover;
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+    box-shadow: $glass-shadow;
+  }
+}
+
+.post-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+
+  a {
+    color: $text-primary;
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
+
+.post-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: $text-muted;
+  margin-bottom: 0.75rem;
+}
+
+.post-date {
+  color: $text-muted;
+  font-size: 0.85rem;
+}
+
+.post-excerpt {
+  color: $text-secondary;
+  margin: 0;
+  line-height: 1.6;
+}
+
+// Notes grid
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.note-card {
+  background: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+
+  &:hover {
+    background: $bg-card-hover;
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+    box-shadow: $glass-shadow;
+  }
+
+  .note-icon {
+    width: 48px;
+    height: 48px;
+    background: $accent-gradient;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .note-info {
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 0.25rem 0;
+      color: $text-primary;
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: $text-muted;
+      margin: 0;
+    }
+  }
+}
+
+// About section
+.about-section {
+  margin-bottom: 3rem;
+
+  .intro-text {
+    font-size: 1.125rem;
+    color: $text-secondary;
+    max-width: 600px;
+    line-height: 1.8;
+  }
+}
+
+// Section headers
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  h2 {
+    margin: 0;
+  }
+
+  .view-all {
+    font-size: 0.9rem;
+    color: $accent-primary;
+
+    &:hover {
+      color: $link-hover;
+    }
+  }
+}
+
+// Blockquote
+blockquote {
+  border-left: 3px solid $accent-primary;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: $text-secondary;
+  font-style: italic;
+}
+
+// Tables
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  background: $bg-card;
+  border-radius: 12px;
+  overflow: hidden;
+
+  th,
+  td {
+    border: 1px solid $border-color;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  th {
+    background-color: $bg-secondary;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  tr:hover td {
+    background: $bg-card-hover;
+  }
+}
+
+// Horizontal rule
+hr {
+  border: none;
+  border-top: 1px solid $border-color;
+  margin: 2rem 0;
+}
+
+// Lists
+ul,
+ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+
+  li {
+    margin-bottom: 0.5rem;
+    color: $text-secondary;
+  }
+}
+
+// Footer
+footer {
+  background: $bg-secondary;
+  border-top: 1px solid $border-color;
+  padding: 2rem 0;
+  text-align: center;
+
+  p {
+    color: $text-muted;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+
+    a {
+      color: $text-secondary;
+
+      &:hover {
+        color: $accent-primary;
+      }
+    }
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+
+  &-primary {
+    background: $accent-gradient;
+    color: white;
+
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+    }
+  }
+
+  &-secondary {
+    background: $bg-card;
+    border: 1px solid $border-color;
+    color: $text-primary;
+
+    &:hover {
+      background: $bg-card-hover;
+      border-color: $accent-primary;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  header {
+    .header-content {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .post-item,
+  .note-card,
+  .card {
+    padding: 1rem;
+  }
+}
+
+// Post article styles
+.post {
+  .post-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $border-color;
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .category-tag {
+    background: rgba(99, 102, 241, 0.15);
+    color: $accent-primary;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .post-content {
+    margin-bottom: 3rem;
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+  }
+
+  .post-footer {
+    padding-top: 1.5rem;
+    border-top: 1px solid $border-color;
+
+    a {
+      color: $text-secondary;
+
+      &:hover {
+        color: $accent-primary;
+      }
+    }
+  }
+}
+
+// Enhancements for the post layout
+.post-header {
+  text-align: center; // Centers the title for a premium feel
+  padding-bottom: 3rem;
+  
+  .post-meta {
+    justify-content: center;
+    color: $text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+    
+    .separator {
+      color: $accent-primary;
+    }
+  }
+
+  .category-list {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+
+.post-content {
+  // Enhancing typography for long-form reading
+  font-size: 1.1rem;
+  
+  // Physics/Math specific: make sure block equations have space
+  .katex-display, .MathJax_Display {
+    margin: 2rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  
+  svg {
+    transition: transform 0.2s ease;
+  }
+  
+  &:hover svg {
+    transform: translateX(-4px);
+  }
+}

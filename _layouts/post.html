@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <div class="post-meta">
+      <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %-d, %Y" }}
+      </time>
+      
+      <span class="separator">•</span>
+      
+      <span class="reading-time">
+        {% assign words = content | number_of_words %}
+        {% if words < 360 %}
+          1 min read
+        {% else %}
+          {{ words | divided_by: 180 }} min read
+        {% endif %}
+      </span>
+    </div>
+
+    <h1>{{ page.title | escape }}</h1>
+
+    {% if page.categories.size > 0 %}
+    <div class="category-list">
+      {% for category in page.categories %}
+      <span class="category-tag">{{ category }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <div class="footer-nav">
+      <a href="{{ '/posts' | relative_url }}" class="btn btn-secondary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to all posts
+      </a>
+    </div>
+  </footer>
+</article>
