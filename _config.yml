@@ -11,3 +11,10 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+# Math Support
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+# Consenti a Jekyll di leggere i file nelle cartelle che iniziano con _
+include: [_includes]
