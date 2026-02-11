@@ -13,3 +13,4 @@ Here are some notes I made during my studies.
 * [Meccanica dei Fluidi](/pdf/Appunti_Meccanica_dei_fluidi.pdf)
 * [Principi di Sistemi Elettrici](/pdf/Appunti_Principi_di_sistemi_elettrici.pdf)
 * [Fisica dei Plasmi](/pdf/Appunti_Fisica_dei_Plasmi.pdf)
+* [Analisi 2](/pdf/Appunti_Analisi_2.pdf)
