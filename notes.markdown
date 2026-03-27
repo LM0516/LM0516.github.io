@@ -14,6 +14,6 @@ Here are some notes I made during my studies.
 * [Meccanica dei Fluidi](/pdf/Appunti_Meccanica_dei_fluidi.pdf)
 * [Principi di Sistemi Elettrici](/pdf/Appunti_Principi_di_sistemi_elettrici.pdf)
 ### Università Milano Bicocca
-* [Fisica dei plasmi](/pdf/appunti_fisica_dei_plasmi.pdf)
-* [Analisi 2](/pdf/appunti_analisi_2.pdf)
-* [Meccanica classica](/pdf/appunti_meccanica_classica.pdf)
+* [Fisica dei plasmi](/pdf/Appunti_Fisica_dei_Plasmi.pdf)
+* [Analisi 2](/pdf/Appunti_Analisi_2.pdf)
+* [Meccanica classica](/pdf/Appunti_Meccanica_Classica.pdf)

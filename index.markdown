@@ -17,6 +17,6 @@ Report](https://github.com/LM0516/computational-physics)
 
 ## Latest Notes
 
-* [Fisica dei plasmi](/pdf/appunti_fisica_dei_plasmi.pdf)
-* [Analisi 2](/pdf/appunti_analisi_2.pdf)
-* [Meccanica Classica](/pdf/appunti_meccanica_classica.pdf)
+* [Fisica dei plasmi](/pdf/Appunti_Fisica_dei_Plasmi.pdf)
+* [Analisi 2](/pdf/Appunti_Analisi_2.pdf)
+* [Meccanica Classica](/pdf/Appunti_Meccanica_Classica.pdf)
