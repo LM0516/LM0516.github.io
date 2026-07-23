@@ -11,12 +11,10 @@ Hello! I'm **Lorenzo Minuz**, a passionate physics student with a love for minim
 
 ## What I'm currently doing
 
-* [Three body simulation in Julia](https://github.com/LM0516/ThreeBody)
-* [Computational Physics
-Report](https://github.com/LM0516/computational-physics)
+* [Physics simulations](https://github.com/LM0516/physics-simulator)
 
 ## Latest Notes
 
-* [Fisica dei plasmi](/pdf/Appunti_Fisica_dei_Plasmi.pdf)
 * [Analisi 2](/pdf/Appunti_Analisi_2.pdf)
 * [Meccanica Classica](/pdf/Appunti_Meccanica_Classica.pdf)
+* [Fisica 2](/pdf/Appunti_Fisica_2.pdf)
