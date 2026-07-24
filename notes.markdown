@@ -22,3 +22,7 @@ Here are some notes I made during my studies.
 * [Meccanica Classica](/pdf/Appunti_Meccanica_Classica.pdf)
 * [Fisica 2](/pdf/Appunti_Fisica_2.pdf)
 * [Fisica Computazionale](/pdf/Relazione_Fisica_Computazionale.pdf)
+
+**Other notes**
+
+* [Mind Maps Website](https://LM0516.github.io/personal-mind-maps/)
