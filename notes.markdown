@@ -17,6 +17,10 @@ Here are some notes I made during my studies.
 
 **Università Milano Bicocca**
 
+* [Fisica delle Particelle](/pdf/Appunti_Fisica_delle_Particelle.pdf)
+* [Fisica delle Particelle (Esercizi)](/pdf/Esercizi_Fisica_delle_Particelle.pdf)
+* [Fisica Nucleare e Subnucleare](/pdf/Appunti_Fisica_Nucleare_e_Subnucleare.pdf)
+* [Struttura della Materia](/pdf/Appunti_Struttura_della_Materia.pdf)
 * [Fisica dei Plasmi](/pdf/Appunti_Fisica_dei_Plasmi.pdf)
 * [Analisi 2](/pdf/Appunti_Analisi_2.pdf)
 * [Meccanica Classica](/pdf/Appunti_Meccanica_Classica.pdf)

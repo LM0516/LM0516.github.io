@@ -15,6 +15,6 @@ Hello! I'm **Lorenzo Minuz**, a passionate physics student with a love for minim
 
 ## Latest Notes
 
-* [Analisi 2](/pdf/Appunti_Analisi_2.pdf)
-* [Meccanica Classica](/pdf/Appunti_Meccanica_Classica.pdf)
-* [Fisica 2](/pdf/Appunti_Fisica_2.pdf)
+* [Fisica delle Particelle](/pdf/Appunti_Fisica_delle_Particelle.pdf)
+* [Fisica Nucleare e Subnucleare](/pdf/Appunti_Fisica_Nucleare_e_Subnucleare.pdf)
+* [Struttura della Materia](/pdf/Appunti_Struttura_della_Materia.pdf)
